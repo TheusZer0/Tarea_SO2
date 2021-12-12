@@ -56,9 +56,21 @@ int asignados[NUM_DE_CLIENTES][NUM_DE_RECURSOS] = {{0, 1, 0},
                                                    {0, 0, 2}};
 
 /* La cantidad de recursos aún necesarios por cada cliente */
-int necesidad[NUM_DE_CLIENTES][NUM_DE_RECURSOS];
+int necesidad[NUM_DE_CLIENTES][NUM_DE_RECURSOS] = {
+        {7 ,  4 ,  3 },
+        {1 ,  2 ,  2 },
+        {6 ,  0 ,  0 },
+        {0 ,  1 ,  1 },
+        {4 ,  3 ,  1 }
+};
 
-int necesidad_cop[NUM_DE_CLIENTES][NUM_DE_RECURSOS];
+int necesidad_cop[NUM_DE_CLIENTES][NUM_DE_RECURSOS] = {
+        {7 ,  4 ,  3 },
+        {1 ,  2 ,  2 },
+        {6 ,  0 ,  0 },
+        {0 ,  1 ,  1 },
+        {4 ,  3 ,  1 }
+};
 
 int disponibles_cop[NUM_DE_RECURSOS] = {3, 3, 2};
 
@@ -187,12 +199,12 @@ void* randormizer_numbers(){
     //}
 
     /* Need table creation with another 2 tables generation first */
-    for (int i = 0; i < NUM_DE_CLIENTES; i++) {
-        for (int j = 0; j < NUM_DE_RECURSOS; j++) {
-            necesidad[i][j] = maximos[i][j] - asignados[i][j];
-            necesidad_cop[i][j] = maximos[i][j] - asignados[i][j];
-        }
-    }
+    //for (int i = 0; i < NUM_DE_CLIENTES; i++) {
+    //    for (int j = 0; j < NUM_DE_RECURSOS; j++) {
+    //        necesidad[i][j] = maximos[i][j] - asignados[i][j];
+    //        necesidad_cop[i][j] = maximos[i][j] - asignados[i][j];
+    //    }
+    //}
 
     //for (int i = 0; i < NUM_DE_RECURSOS; ++i) {
     //    disponibles[i]= (randnum(2, 5));
